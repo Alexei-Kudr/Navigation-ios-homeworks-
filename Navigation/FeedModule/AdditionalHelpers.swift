@@ -2,7 +2,10 @@
 //  AdditionalHelpers.swift
 //  Navigation
 //
-//  Created by Надежда Данилюк on 14.01.2023.
 //
 
-import Foundation
+import UIKit
+
+var screenSize = UIScreen.main.bounds
+
+let postComplex = FeedViewController().postStruct

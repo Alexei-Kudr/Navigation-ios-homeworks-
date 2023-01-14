@@ -9,19 +9,39 @@
 /* Begin PBXBuildFile section */
 		DDF5753B297312B30069806E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5753A297312B30069806E /* AppDelegate.swift */; };
 		DDF5753D297312B30069806E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5753C297312B30069806E /* SceneDelegate.swift */; };
-		DDF5753F297312B30069806E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5753E297312B30069806E /* ViewController.swift */; };
 		DDF57544297312B60069806E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF57543297312B60069806E /* Assets.xcassets */; };
 		DDF57547297312B60069806E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF57545297312B60069806E /* LaunchScreen.storyboard */; };
+		DDF5755D29731BA60069806E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5755C29731BA60069806E /* ProfileViewController.swift */; };
+		DDF5755F29731BE00069806E /* PostProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5755E29731BE00069806E /* PostProfile.swift */; };
+		DDF5756129731C630069806E /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5756029731C630069806E /* ProfileHeaderView.swift */; };
+		DDF5756329731C880069806E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5756229731C870069806E /* LogInViewController.swift */; };
+		DDF5756529731CC10069806E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5756429731CC10069806E /* PostTableViewCell.swift */; };
+		DDF5756829731D160069806E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5756729731D160069806E /* PostViewController.swift */; };
+		DDF5756B29731D600069806E /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5756A29731D600069806E /* InfoViewController.swift */; };
+		DDF5756E29731DA90069806E /* PostStrcture.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5756D29731DA90069806E /* PostStrcture.swift */; };
+		DDF5757029731DD30069806E /* AdditionalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5756F29731DD30069806E /* AdditionalHelpers.swift */; };
+		DDF5757229731DF60069806E /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5757129731DF60069806E /* FeedViewController.swift */; };
+		DDF5757529731E3D0069806E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5757429731E3C0069806E /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DDF57537297312B30069806E /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF5753A297312B30069806E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF5753C297312B30069806E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDF5753E297312B30069806E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDF57543297312B60069806E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDF57546297312B60069806E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDF57548297312B60069806E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDF5755C29731BA60069806E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DDF5755E29731BE00069806E /* PostProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProfile.swift; sourceTree = "<group>"; };
+		DDF5756029731C630069806E /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		DDF5756229731C870069806E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		DDF5756429731CC10069806E /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		DDF5756729731D160069806E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		DDF5756A29731D600069806E /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		DDF5756D29731DA90069806E /* PostStrcture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStrcture.swift; sourceTree = "<group>"; };
+		DDF5756F29731DD30069806E /* AdditionalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalHelpers.swift; sourceTree = "<group>"; };
+		DDF5757129731DF60069806E /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		DDF5757429731E3C0069806E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +74,72 @@
 		DDF57539297312B30069806E /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				DDF5753A297312B30069806E /* AppDelegate.swift */,
-				DDF5753C297312B30069806E /* SceneDelegate.swift */,
-				DDF5753E297312B30069806E /* ViewController.swift */,
+				DDF5757329731E1E0069806E /* TabBarModule */,
+				DDF5754E297319450069806E /* Application */,
+				DDF5755B29731B5E0069806E /* ProfileModule */,
+				DDF5756629731CF60069806E /* PostViewModule */,
+				DDF5756929731D370069806E /* InfoModule */,
+				DDF5756C29731D7A0069806E /* FeedModule */,
 				DDF57543297312B60069806E /* Assets.xcassets */,
 				DDF57545297312B60069806E /* LaunchScreen.storyboard */,
 				DDF57548297312B60069806E /* Info.plist */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		DDF5754E297319450069806E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5753C297312B30069806E /* SceneDelegate.swift */,
+				DDF5753A297312B30069806E /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DDF5755B29731B5E0069806E /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5755C29731BA60069806E /* ProfileViewController.swift */,
+				DDF5755E29731BE00069806E /* PostProfile.swift */,
+				DDF5756029731C630069806E /* ProfileHeaderView.swift */,
+				DDF5756229731C870069806E /* LogInViewController.swift */,
+				DDF5756429731CC10069806E /* PostTableViewCell.swift */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		DDF5756629731CF60069806E /* PostViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5756729731D160069806E /* PostViewController.swift */,
+			);
+			path = PostViewModule;
+			sourceTree = "<group>";
+		};
+		DDF5756929731D370069806E /* InfoModule */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5756A29731D600069806E /* InfoViewController.swift */,
+			);
+			path = InfoModule;
+			sourceTree = "<group>";
+		};
+		DDF5756C29731D7A0069806E /* FeedModule */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5756D29731DA90069806E /* PostStrcture.swift */,
+				DDF5756F29731DD30069806E /* AdditionalHelpers.swift */,
+				DDF5757129731DF60069806E /* FeedViewController.swift */,
+			);
+			path = FeedModule;
+			sourceTree = "<group>";
+		};
+		DDF5757329731E1E0069806E /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				DDF5757429731E3C0069806E /* TabBarController.swift */,
+			);
+			path = TabBarModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +212,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF5753F297312B30069806E /* ViewController.swift in Sources */,
+				DDF5756829731D160069806E /* PostViewController.swift in Sources */,
+				DDF5757529731E3D0069806E /* TabBarController.swift in Sources */,
+				DDF5756129731C630069806E /* ProfileHeaderView.swift in Sources */,
+				DDF5755F29731BE00069806E /* PostProfile.swift in Sources */,
+				DDF5756529731CC10069806E /* PostTableViewCell.swift in Sources */,
+				DDF5756B29731D600069806E /* InfoViewController.swift in Sources */,
+				DDF5756E29731DA90069806E /* PostStrcture.swift in Sources */,
+				DDF5756329731C880069806E /* LogInViewController.swift in Sources */,
 				DDF5753B297312B30069806E /* AppDelegate.swift in Sources */,
+				DDF5757029731DD30069806E /* AdditionalHelpers.swift in Sources */,
+				DDF5755D29731BA60069806E /* ProfileViewController.swift in Sources */,
+				DDF5757229731DF60069806E /* FeedViewController.swift in Sources */,
 				DDF5753D297312B30069806E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
