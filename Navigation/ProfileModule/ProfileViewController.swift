@@ -5,6 +5,7 @@
 //
 
 import UIKit
+import StorageService
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -28,6 +29,15 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+        self.debug()
+    }
+    
+    private func debug() {
+        #if DEBUG
+        self.tableView.backgroundColor = .red
+        #else
+        self.tableView.backgroundColor = .blue
+        #endif
     }
     
     private func setupTableView() {
