@@ -4,7 +4,6 @@
 //
 //
 
-import UIKit
 import SnapKit
 
 class ProfileHeaderView: UITableViewHeaderFooterView {
