@@ -10,6 +10,7 @@ import StorageService
 
 class PostTableViewCell: UITableViewCell {
     
+    private var viewCounter = 0
     
     //MARK: - Author (никнейм автора публикации)
     private lazy var author: UILabel = {
@@ -59,10 +60,11 @@ class PostTableViewCell: UITableViewCell {
     // MARK: - setup (конфигурация ячейки из массива)
   public func configure(post: ProfilePost) {
        image.image = UIImage(named: post.image)
-        author.text = post.author
+       author.text = post.author
        postDescription.text = post.description
        likes.text = "Likes: \(post.likes)"
        views.text = "Views: \(post.views)"
+       viewCounter = post.views
     }
     
     // MARK: - init (подготовительный процесс экземпляра класса, структуры или перечисления для дальнейшего использования.)
@@ -73,6 +75,11 @@ class PostTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) { //если создать ячейку из storyboard и xib будет краш
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func incrementPostViewsCounter() {
+        viewCounter += 1
+        views.text = "Views: \(viewCounter)"
     }
     
     // MARK: - Constraints
