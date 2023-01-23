@@ -4,11 +4,15 @@
 //
 //
 
+import iOSIntPackage
 import UIKit
 import StorageService
 
 
 class PostTableViewCell: UITableViewCell {
+        
+    var filterIosInt = ImageProcessor()
+    filterIosInt.processImage(sourceImage: "рио", filter: .chrome, completion: <#T##(UIImage?) -> Void#>)
     
     private var viewCounter = 0
     
