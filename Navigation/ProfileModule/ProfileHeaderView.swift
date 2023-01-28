@@ -135,7 +135,7 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     }
     
     func setupConstraint() {
-        [fullNameLabel, setStatusButton, statusLabel, statusTextField,imageAnimation, avatarImageView, closeButton ].forEach({addSubview($0)})
+        [fullNameLabel, setStatusButton, statusLabel, statusTextField, imageAnimation, avatarImageView, closeButton ].forEach({addSubview($0)})
         
         fullNameLabel.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(27)
