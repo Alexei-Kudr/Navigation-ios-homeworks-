@@ -9,6 +9,9 @@ import StorageService
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    private var userService: UserService?
+
+    
     static let headerIdent = "header"
     static let photoIdent = "photo"
     static let postIdent = "post"

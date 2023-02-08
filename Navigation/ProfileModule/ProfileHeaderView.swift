@@ -10,7 +10,6 @@ import SnapKit
 class ProfileHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Свойства
-    
     private var isImageViewIncreased = false
 //    определяем полупрозрачную  вью под аватаром
     
