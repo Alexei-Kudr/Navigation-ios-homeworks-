@@ -9,7 +9,7 @@ import StorageService
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private var userService: UserService?
+    private var userService: User?
 
     
     static let headerIdent = "header"

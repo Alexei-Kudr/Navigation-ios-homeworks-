@@ -30,8 +30,8 @@ protocol UserService {
 
 class CurrentUserService: UserService {
     func authorization(login: String) -> User? {
-        guard login == user.login else {return nil}
-        return user
+       if login == user.login {return user}
+        return nil
     }
 
 }
