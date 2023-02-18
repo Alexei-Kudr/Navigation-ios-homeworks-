@@ -110,6 +110,11 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Методы
     
+    public func configurationHeader(user:User) {
+        avatarImageView.image = user.avatar
+        statusLabel.text = user.status
+    }
+    
     @objc func buttonPressed() {
         statusLabel.text = statusText
         print("\(statusLabel.text!)")

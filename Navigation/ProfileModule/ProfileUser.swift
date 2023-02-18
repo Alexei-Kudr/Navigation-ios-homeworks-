@@ -20,7 +20,7 @@ class User {
     }
 }
 
-var user = User(login: "Вася", fullName: "Кот", avatar: UIImage(named: "kot")!, status: "в сети")
+var user = User(login: "Вася", fullName: "Кот", avatar: UIImage(named: "рио")!, status: "в сети")
 
 
 protocol UserService {
