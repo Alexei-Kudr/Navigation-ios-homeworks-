@@ -9,7 +9,17 @@ import UIKit
 class LoginViewController: UIViewController {
     
     // MARK: - Свойства
-
+    
+    let authorizationService: CurrentUserService
+    init(authorizationService: CurrentUserService) {
+        self.authorizationService = authorizationService
+        super.init(nibName: nil, bundle: nil)}
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     class CustomButton: UIButton {
         override var isHighlighted: Bool {
             didSet {
@@ -106,11 +116,11 @@ class LoginViewController: UIViewController {
         button.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
         return button
     }()
- 
+    
     private var login: String?
-   
+    
     // MARK: - Жизненный цикл
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true //скрыть
@@ -135,13 +145,13 @@ class LoginViewController: UIViewController {
         )
         
     }
- 
-//Распознаватель жестов тап
+    
+    //Распознаватель жестов тап
     private func setupGestures() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.forcedHidingKeyboard))
         self.view.addGestureRecognizer(tapGesture)
     }
-//view будет появляться
+    //view будет появляться
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self,
@@ -153,7 +163,7 @@ class LoginViewController: UIViewController {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
- //сonstraints
+    //сonstraints
     private func scrollViewConstraints() -> [NSLayoutConstraint] {
         let topAnchor = self.scrollView.topAnchor.constraint(equalTo:  self.view.topAnchor)
         let leadingAnchor = self.scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
@@ -199,10 +209,20 @@ class LoginViewController: UIViewController {
     
     @objc
     private func logInButtonPressed() {
-        let postViewController = ProfileViewController()
-        navigationController?.pushViewController(postViewController, animated: true)
+        if let user = authorizationService.authorization(login: login ?? "") {
+            let profile = ProfileViewController(userService: user)
+            self.navigationController?.pushViewController(profile, animated: true)
+        } else {
+            let alert = UIAlertController(title: "вы ввели не верный логин", message: "логин не соответсвует", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
-    
     @objc private func didShowKeyboard(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue

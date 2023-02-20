@@ -9,8 +9,16 @@ import StorageService
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private var userService: User?
-
+    var userService: User
+    init(userService: User) {
+        self.userService = userService
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     static let headerIdent = "header"
     static let photoIdent = "photo"
