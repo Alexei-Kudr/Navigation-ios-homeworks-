@@ -4,11 +4,14 @@
 //
 //
 
+import iOSIntPackage
 import UIKit
 import StorageService
 
 
 class PostTableViewCell: UITableViewCell {
+        
+    let imageProcessor = ImageProcessor() //фильтр для картинок (экземпляр структуры)
     
     private var viewCounter = 0
     
@@ -65,6 +68,13 @@ class PostTableViewCell: UITableViewCell {
        likes.text = "Likes: \(post.likes)"
        views.text = "Views: \(post.views)"
        viewCounter = post.views
+       guard let images = image.image else { return }
+
+      // Добавим наложение фильтра при помощи зависимости iOSIntPackage:
+      imageProcessor.processImage(sourceImage: images, filter: .colorInvert) { filterImage in
+          image.image = filterImage
+      }
+            
     }
     
     // MARK: - init (подготовительный процесс экземпляра класса, структуры или перечисления для дальнейшего использования.)
