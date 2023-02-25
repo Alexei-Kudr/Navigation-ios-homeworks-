@@ -20,19 +20,30 @@ class User {
     }
 }
 
-var user = User(login: "rio", fullName: "Попугай", avatar: UIImage(named: "рио")!, status: "в сети")
-
-
 protocol UserService {
     func authorization(login: String) -> User?
 }
 
 
 class CurrentUserService: UserService {
+   
+    var user = User(login: "rio", fullName: "Попугай", avatar: UIImage(named: "рио")!, status: "в сети")
+    
     func authorization(login: String) -> User? {
-       if login == user.login {return user}
+        if login == user.login {return user}
         return nil
     }
-
 }
+
+class TestUserService: UserService {
+    
+    var testUser = User(login: "test", fullName: "test", avatar: UIImage(named: "рио")!, status: "test")
+    
+    func authorization(login: String) -> User? {
+        if login == testUser.login {return testUser}
+        return nil
+    }
+}
+    
+
 

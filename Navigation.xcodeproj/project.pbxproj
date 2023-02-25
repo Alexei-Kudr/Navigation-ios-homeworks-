@@ -725,7 +725,7 @@
 				DDF5754A297312B60069806E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		DDF5754B297312B60069806E /* Build configuration list for PBXNativeTarget "Navigation" */ = {
 			isa = XCConfigurationList;
@@ -734,7 +734,7 @@
 				DDF5754D297312B60069806E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		DDF5758329745E000069806E /* Build configuration list for PBXNativeTarget "StorageService" */ = {
 			isa = XCConfigurationList;
@@ -743,7 +743,7 @@
 				DDF5758529745E000069806E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

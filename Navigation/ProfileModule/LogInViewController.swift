@@ -10,14 +10,14 @@ class LoginViewController: UIViewController {
     
     // MARK: - Свойства
     
-    let authorizationService: CurrentUserService
-    init(authorizationService: CurrentUserService) {
-        self.authorizationService = authorizationService
-        super.init(nibName: nil, bundle: nil)}
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    let authorizationService: CurrentUserService
+//    init(authorizationService: CurrentUserService) {
+//        self.authorizationService = authorizationService
+//        super.init(nibName: nil, bundle: nil)}
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     
     class CustomButton: UIButton {
@@ -209,6 +209,13 @@ class LoginViewController: UIViewController {
     
     @objc
     private func logInButtonPressed() {
+     
+        #if DEBUG
+        let authorizationService = TestUserService()
+        #else
+        let authorizationService = CurrentUserService()
+        #endif
+        
         if let user = authorizationService.authorization(login: login ?? "") {
             let profile = ProfileViewController(userService: user)
             self.navigationController?.pushViewController(profile, animated: true)
