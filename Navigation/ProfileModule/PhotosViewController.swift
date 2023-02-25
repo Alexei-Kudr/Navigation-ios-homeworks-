@@ -10,7 +10,7 @@ class PhotosViewController: UIViewController {
     
     let photoIdent = "photoCell"
 
-    // MARK: Visual objects
+    // MARK: - Visual objects
     
     lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()

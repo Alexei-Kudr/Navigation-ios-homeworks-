@@ -10,7 +10,6 @@ import SnapKit
 class ProfileHeaderView: UITableViewHeaderFooterView {
     
     // MARK: - Свойства
-    
     private var isImageViewIncreased = false
 //    определяем полупрозрачную  вью под аватаром
     
@@ -110,6 +109,11 @@ class ProfileHeaderView: UITableViewHeaderFooterView {
     private var statusText: String = ""
     
     // MARK: - Методы
+    
+    public func configurationHeader(user:User) {
+        avatarImageView.image = user.avatar
+        statusLabel.text = user.status
+    }
     
     @objc func buttonPressed() {
         statusLabel.text = statusText
